@@ -1,0 +1,45 @@
+[{
+    "_id": "62301e7fd4af9cb041e813ea",
+    "name": "product43",
+    "description": "product6 description2424",
+    "richDescription": "Same shit new day23234",
+    "image": "img",
+    "images": [
+        "http://localhost:3000/public/uploads/1647465740930-bitch.PNG",
+        "http://localhost:3000/public/uploads/1647465740932-bitch2.PNG"
+    ],
+    "brand": "RandomBs",
+    "price": 1300,
+    "category": "622c16244767a52f13bfca80",
+    "countInStock": 22,
+    "rating": 3,
+    "numReviews": 2121,
+    "isFeatured": false,
+    "dateCreated": "2022-03-15T05:05:03.104Z",
+    "__v": 0,
+    "id": "62301e7fd4af9cb041e813ea"
+},
+    {
+     "_id": "62301e7fd4af9cb0asdes3ea",
+        "name": "product432",
+        "description": "product6 sadadssaddescription2424",
+        "richDescription": "new shit  shit new day23234",
+        "image": "img",
+        "images": [
+            "http://localhost:3000/public/uploads/1647465740930-bitch.PNG",
+            "http://localhost:3000/public/uploads/1647465740932-bitch2.PNG"
+        ],
+        "brand": "RandomBs",
+        "price": 4327698,
+        "category": "622c16244767a52f13bfca80",
+        "countInStock": 2123132,
+        "rating": 322,
+        "numReviews": 213,
+        "isFeatured": false,
+        "dateCreated": "2022-03-15T05:05:03.104Z",
+        "__v": 0,
+        "id": "62301e7fd4af9cb0asdes3ea"   
+
+}
+
+]
