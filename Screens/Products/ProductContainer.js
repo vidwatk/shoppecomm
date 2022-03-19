@@ -3,6 +3,7 @@ import React, { Component, useState, useEffect } from 'react'
 import { Icon, Container, Header, Item, Text, Input } from "native-base"
 
 import ProductList from "./ProductList"
+import SearchedProducts from './SearchedProducts';
 
 const data = require("../../assets/products.json");
 //console.log(data);
@@ -10,15 +11,33 @@ const ProductContainer = () => {
 
     const[products, setProducts] = useState([]);
     const[productsFiltered, setproductsFiltered] = useState([]);
+    const[focus, setFocus] = useState();
 
     useEffect(() => {
         setProducts(data);
         setproductsFiltered(data);
+        setFocus(false);
 
         return() =>{
             setProducts([])
+            setproductsFiltered([])
+            setFocus()
         }
     }, [])
+
+    const searchProduct = (text) => {
+        setproductsFiltered(
+            products.filter((i) => i.name.toLowerCase().includes(text.toString().toLowerCase()))
+        )
+    }
+
+    const openList = () => {
+        setFocus(true);
+    }
+
+    const onBlur = () => {
+        setFocus(false);
+    }
 
     return(
         <Container>
@@ -27,12 +46,20 @@ const ProductContainer = () => {
                     <Icon name="ios-search" />
                     <Input
                         placeholder='Search'
-                        //onFocus={}
-                        //onChange={(text) => }
+                        onFocus={openList}
+                        onChange={(text) => searchProduct(text)}
                     />
+                    {focus == true ? (
+                        <Icon onPress={onBlur} name="ios-close" />
+                    ): null}
                 </Item>
             </Header>
-            <View>
+            {focus == true ? (
+                <SearchedProducts
+                    productsFiltered = {productsFiltered}
+                />
+            ): (
+                <View>
             <Text> Product Contaniner </Text>
             <View style= {{marginTop: 100}}>
             <FlatList
@@ -45,6 +72,8 @@ const ProductContainer = () => {
             />
             </View>
         </View>
+            )}
+            
         </Container>
         
     )

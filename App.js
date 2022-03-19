@@ -1,10 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
+//import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import { Header } from 'react-native/Libraries/NewAppScreen';
 
 
 //Screens
 import ProductContainer from "./Screens/Products/ProductContainer";
+import Header from './Shared/Header';
 
 
 export default function App() {
