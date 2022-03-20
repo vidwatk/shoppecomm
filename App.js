@@ -13,7 +13,7 @@ export default function App() {
       <Header />
       <ProductContainer />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
