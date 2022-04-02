@@ -4,6 +4,7 @@ import { Icon, Container, Header, Item, Text, Input } from "native-base"
 
 import ProductList from "./ProductList"
 import SearchedProducts from './SearchedProducts';
+import Banner from '../../Shared/Banner';
 
 const data = require("../../assets/products.json");
 //console.log(data);
@@ -60,7 +61,9 @@ const ProductContainer = () => {
                 />
             ): (
                 <View>
-            <Text> Product Contaniner </Text>
+            <View>
+                <Banner />
+            </View>
             <View style= {{marginTop: 100}}>
             <FlatList
                 horizontal
