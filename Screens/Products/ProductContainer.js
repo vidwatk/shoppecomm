@@ -1,4 +1,4 @@
-import { View, StyleSheet, ActivityIndicator, FlatList } from 'react-native'
+import { View, StyleSheet, ActivityIndicator, FlatList, ScrollView, Dimensions } from 'react-native'
 import React, { Component, useState, useEffect } from 'react'
 import { Icon, Container, Header, Item, Text, Input } from "native-base"
 
@@ -11,6 +11,7 @@ const data = require("../../assets/products.json");
 const productCategories = require("../../assets/categories.json")
 //console.log(categories);
 //console.log(data);
+var {height} = Dimensions.get("window")
 const ProductContainer = () => {
 
     const[products, setProducts] = useState([]);
@@ -26,6 +27,7 @@ const ProductContainer = () => {
         setproductsFiltered(data);
         setFocus(false);
         setCategories(productCategories);
+        setProductsCtg(data);
         setActive(-1);
         stateInitialState(data);
 
@@ -88,7 +90,8 @@ const ProductContainer = () => {
                     productsFiltered = {productsFiltered}
                 />
             ): (
-                <View>
+                <ScrollView>
+                    <View>
             <View>
                 <Banner />
             </View>
@@ -101,22 +104,49 @@ const ProductContainer = () => {
                     setActive={setActive}
                 />
             </View>
-            <View style= {{marginTop: 100}}>
-            <FlatList
-                horizontal
-                data={products}
-                renderItem={({item}) => <ProductList 
-                key={item.id}
-                item={item}/>}
-                keyExtractor={item => item.name}
-            />
-            </View>
+            {productsCtg.length > 0 ? (
+                <View style= {styles.listContainer}>
+                    {productsCtg.map((item) => {
+                        return(
+                            <ProductList 
+                                key={item._id}
+                                item={item}
+                            />
+                        )
+                    })}
+                </View>
+            ): (
+                <View style= {[styles.center, {height: height / 2}]}>
+                    <Text>No Products Found</Text>
+                </View>
+            )}
         </View>
+                </ScrollView>
+                
             )}
             
         </Container>
         
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flexWrap: "wrap",
+        backgroundColor: "gainsboro",
+    },
+    listContainer: {
+        height: height,
+        flex: 1,
+        flexDirection: "row",
+        alignItems: "flex-start",
+        flexWrap: "wrap",
+        backgroundColor: "gainsboro",
+    },
+    center: {
+        justifyContent: "center",
+        alignItems: "center"
+    }
+})
 
 export default ProductContainer;

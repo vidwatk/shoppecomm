@@ -9,7 +9,7 @@ const Banner = () => {
     const [bannerData, setBannerData] = useState([])
 
     useEffect(() => {
-        setBannerData(["https://static.independent.co.uk/2021/07/02/15/Bang%20%20Olufsen%20Beoplay%20HX%20indybest.jpeg?quality=75&width=982&height=726&auto=webp",
+        setBannerData(["https://images-platform.99static.com//pQKPl0rlxBpjl-g0kGulMOK438U=/0x0:2000x2000/fit-in/500x500/99designs-contests-attachments/86/86488/attachment_86488271",
                        "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2014%2F11%2Fdj-khaled-x-bo-play-beoplay-h6-headphones-0.jpg?w=960&cbr=1&q=90&fit=max",
                        "https://www.headphonesty.com/wp-content/uploads/2020/01/Man-Using-HD-350BT-Headphones--1200x1200-cropped.jpg" 
                     ])
