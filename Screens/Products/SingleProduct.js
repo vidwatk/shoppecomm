@@ -40,3 +40,5 @@ const styles = StyleSheet.create({
         height: 250
     }
 })
+
+export default SingleProduct;

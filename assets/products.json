@@ -5,8 +5,6 @@
     "richDescription": "Same shit new day23234",
     "image": "img",
     "images": [
-        "http://localhost:3000/public/uploads/1647465740930-bitch.PNG",
-        "http://localhost:3000/public/uploads/1647465740932-bitch2.PNG"
     ],
     "brand": "RandomBs",
     "price": 1300,
@@ -26,8 +24,6 @@
         "richDescription": "new shit  shit new day23234",
         "image": "img",
         "images": [
-            "http://localhost:3000/public/uploads/1647465740930-bitch.PNG",
-            "http://localhost:3000/public/uploads/1647465740932-bitch2.PNG"
         ],
         "brand": "RandomBs",
         "price": 4327698,

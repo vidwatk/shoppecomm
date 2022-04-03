@@ -13,6 +13,7 @@ const ProductCard = (props) => {
             style={styles.image}
             resizeMode="contain"
             source={{uri:"https://www.razer.com/assets/images/razer-default-og-image.png"}}
+            //source={{uri: image ? image: "https://www.razer.com/assets/images/razer-default-og-image.png"}}
             />
             <View style={styles.card}/>
             <Text style={styles.title}>

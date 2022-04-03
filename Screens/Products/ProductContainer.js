@@ -12,7 +12,7 @@ const productCategories = require("../../assets/categories.json")
 //console.log(categories);
 //console.log(data);
 var {height} = Dimensions.get("window")
-const ProductContainer = () => {
+const ProductContainer = (props) => {
 
     const[products, setProducts] = useState([]);
     const[productsFiltered, setproductsFiltered] = useState([]);
@@ -109,6 +109,7 @@ const ProductContainer = () => {
                     {productsCtg.map((item) => {
                         return(
                             <ProductList 
+                                navigation= {props.navigation}
                                 key={item._id}
                                 item={item}
                             />
