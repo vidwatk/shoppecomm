@@ -12,7 +12,7 @@ const ProductCard = (props) => {
             <Image 
             style={styles.image}
             resizeMode="contain"
-            source={{uri:"https://www.razer.com/assets/images/razer-default-og-image.png"}}
+            source={{uri:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FASUS-Display-i7-10750H-Keyboard-G512LW-ES76%2Fdp%2FB0863Y4QGV&psig=AOvVaw06wiUiShOFv6MEpUTUb9bu&ust=1649412468381000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCKixgrjagfcCFQAAAAAdAAAAABAD"}}
             //source={{uri: image ? image: "https://www.razer.com/assets/images/razer-default-og-image.png"}}
             />
             <View style={styles.card}/>
